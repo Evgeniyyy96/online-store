@@ -1,6 +1,6 @@
 <template>
   <div>
-    test
+    <h1 :class="titleClass">Make me red</h1>
   </div>
 </template>
 
@@ -12,3 +12,19 @@ export default {
   }
 }
 </script>
+
+<script>
+export default {
+  data () {
+    return {
+      titleClass: 'title'
+    }
+  }
+}
+</script>
+
+<style>
+.title {
+  color: red;
+}
+</style>
