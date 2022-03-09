@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 :class="titleClass">Make me red</h1>
+    <button @click="increment">count is: {{ count }}</button>
   </div>
 </template>
 
@@ -17,14 +17,23 @@ export default {
 export default {
   data () {
     return {
-      titleClass: 'title'
+      count: 0
+      }
+    }
+  }
+</script>
+
+<script>
+export default {
+  data () {
+    return {
+      count: 0
+    }
+  },
+  methods: {
+    increment() {
+      this.count++
     }
   }
 }
 </script>
-
-<style>
-.title {
-  color: red;
-}
-</style>
