@@ -1,6 +1,7 @@
 <template>
   <div>
-    <button @click="increment">count is: {{ count }}</button>
+    <input v-model="text" placeholder="Type here">
+    <p>{{ text }}</p>
   </div>
 </template>
 
@@ -17,22 +18,12 @@ export default {
 export default {
   data () {
     return {
-      count: 0
-      }
-    }
-  }
-</script>
-
-<script>
-export default {
-  data () {
-    return {
-      count: 0
+      text: ''
     }
   },
   methods: {
-    increment() {
-      this.count++
+    onInput (e) {
+      this.text = e.target.value
     }
   }
 }
