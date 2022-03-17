@@ -40,7 +40,7 @@ export default {
       this.newYodo = ''
     },
     removeTodo(todo) {
-      this.todos = this.todos.filter((t) => t !== todo)       // Не поня как фильтр сделан
+      this.todos = this.todos.filter((t) => t !== todo)       // Не поня как фильтр сделан ((
     }
   }
 }
